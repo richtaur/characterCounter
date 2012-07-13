@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Character Counter</title>
+		<style>
+			html {
+				font-family: Helvetica, Sans-Serif;
+			}
+			#text {
+				font-size: 20px;
+				min-width: 640px;
+				min-height: 480px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="count">Character counter</h1>
+		<textarea id="text"></textarea>
+		<script>
+			var text = document.getElementById("text");
+			var count = document.getElementById("count");
+			var update = function () {
+				count.innerHTML = "Characters: " + text.value.length;
+			};
+			addEventListener("keyup", update, false);
+			update();
+		</script>
+	</body>
+</html>
